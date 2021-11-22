@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 
 const Shop = () => (
     <div>
-        <h1>Shop</h1>
+        <h1>Tienda</h1>
         <ItemList />
     </div>
 )

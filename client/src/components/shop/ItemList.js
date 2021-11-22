@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemList = () => (
     <div>
-        <h1>Here goes a list of items</h1>
+        <h5>Aquí va una lista de artículos</h5>
     </div>
 )
 

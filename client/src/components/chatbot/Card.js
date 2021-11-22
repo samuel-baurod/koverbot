@@ -2,9 +2,9 @@ import React from "react";
 
 const Card = (props) => {
     return (
-    <div style={{ float: 'left', paddingRight:30, height: 270 }}>
+    <div style={{ float: 'left', paddingRight:30, height: 210 }}>
         <div className="card">
-            <div className="card-image" style={{width: 240}}>
+            <div className="card-image" style={{width: 180}}>
                 <img alt={props.payload.fields.titulo.stringValue} src={props.payload.fields.imagen.stringValue} />
                     <span className="card-title">{props.payload.fields.titulo.stringValue}</span>
             </div>
