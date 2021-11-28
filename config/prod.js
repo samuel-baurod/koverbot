@@ -5,4 +5,5 @@ module.exports = {
     googleClientEmail: process.env.GOOGLE_CLIENT_EMAIL,
     goooglePrivateKey: process.env.GOOGLE_PRIVATE_KEY,
     mongoURI: process.env.MONGO_URI,
+    
 };

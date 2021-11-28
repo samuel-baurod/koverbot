@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
 const Card = (props) => {
     return (
-    <div style={{ float: 'left', paddingRight:30, height: 210 }}>
-        <div className="card">
-            <div className="card-image" style={{width: 180}}>
-                <img alt={props.payload.fields.titulo.stringValue} src={props.payload.fields.imagen.stringValue} />
-                    <span className="card-title">{props.payload.fields.titulo.stringValue}</span>
-            </div>
-            <div className="card-content">
-                {props.payload.fields.descripcion.stringValue}
-                <p><a href="/">{props.payload.fields.stock.stringValue}</a></p>
-            </div>
-            <div className="card-action">
-                <a target="_blank" rel="noopener noreferrer" href={props.payload.fields.link.stringValue}>Ver más</a>
+        <div  style={{ height: 240, paddingRight:30, float: 'left'}}>
+            <div className="card">
+                <div className="card-image" style={{ width: 210}}>
+                    <img alt={props.payload.header} src={props.payload.image} />
+                    <span className="card-title">{props.payload.header}</span>
+                </div>
+                <div className="card-content">
+                    {props.payload.description}
+                    <p> <a href="/">{props.payload.price}</a></p>
+                </div>
+                <div className="card-action">
+                    <a target="_blank" rel="noopener noreferrer" href={props.payload.link}>Ver mas</a>
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 
