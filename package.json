@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "backend": "nodemon index.js",
+    "backend": "nodemon index.js --ignore client",
     "frontend": "npm run start --prefix client",
     "dev": "concurrently \"npm run backend\"  \"npm run start --prefix client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
@@ -26,7 +26,8 @@
     "google-oauth-jwt": "^0.2.0",
     "mongoose": "^5.13.13",
     "react": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "xhr.js": "^1.0.2"
   },
   "devDependencies": {
     "concurrently": "^6.3.0",

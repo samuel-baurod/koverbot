@@ -40,7 +40,7 @@ class Chatbot extends Component {
 
     async df_text_query (text) {
         let says = {
-            speaks: 'me',
+            speaks: 'yo',
             msg: {
                 text: {
                     text: text

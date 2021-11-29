@@ -18,7 +18,7 @@ const Message = (props) => {
                         {props.text}
                     </span>
                 </div>
-                {props.speaks==='me' &&
+                {props.speaks==='yo' &&
                 <div className="col s2">
                     <a href="/" className="btn-floating btn-large waves-effect waves-light red">
                         {props.speaks}
