@@ -7,6 +7,7 @@ import { v4 as uuid} from 'uuid';
 
 import Message from './Message';
 import Card from './Card';
+
 import QuickReplies from './QuickReplies';
 
 const cookies = new Cookies();
@@ -196,8 +197,8 @@ class Chatbot extends Component {
             case 'recomendar_si':
                 this.df_event_query('MOSTRAR_RECOMENDACIONES');
                 break;
-            case 'training_info_productos':
-                this.df_event_query('INFOPRODUCTOS');
+            case 'training_costos':
+                this.df_event_query('COSTOS');
                 break;
             default:
                 this.df_text_query(text);
@@ -210,6 +211,7 @@ class Chatbot extends Component {
         return cards.map((card, i) => <Card key={i} payload={card}/>);
     }
 
+
     renderOneMessage(message, i) {
         if (message.msg && message.msg.text && message.msg.text.text) {
             return <Message key={i} speaks={message.speaks} text={message.msg.text.text} />;
@@ -221,7 +223,7 @@ class Chatbot extends Component {
                 <div className="card-panel grey lighten-5 z-depth-1">
                     <div style={{overflow: 'hidden'}}>
                         <div className="col s2">
-                            <a href="/" className="btn-floating btn-large waves-effect waves-light red">{message.speaks}</a>
+                            <a href="/" className="btn-floating btn-large waves-effect waves-light grey darken-3">{message.speaks}</a>
                         </div>
                         <div style={{overflow: 'auto', overflowY: 'scroll'}}>
                             <div style={{ height: 300, width:message.msg.payload.cards.length * 270}}>
@@ -267,7 +269,7 @@ class Chatbot extends Component {
         return(
             <div style={{ minHeight: 500, maxHeight: 470, width:400, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}>
                 <nav>
-                    <div className="nav-wrapper">
+                    <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="/" onClick={this.hide}>Cerrar</a></li>
@@ -290,7 +292,7 @@ class Chatbot extends Component {
         return(
             <div style={{ minHeight: 40, maxHeight: 500, width: 400, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgrey'}}>
                 <nav>
-                    <div className="nav-wrapper">
+                    <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="/" onClick={this.show}>Mostrar</a></li>
@@ -304,6 +306,7 @@ class Chatbot extends Component {
             );
         }   
     }
+
 }
 
 export default withRouter(Chatbot);

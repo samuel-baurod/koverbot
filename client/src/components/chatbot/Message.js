@@ -8,7 +8,7 @@ const Message = (props) => {
             <div className="row valign-wrapper">
                 {props.speaks==='bot' &&
                 <div className="col s2">
-                    <a href="/" className="btn-floating btn-large waves-effect waves-light red">
+                    <a href="/" className="btn-floating btn-large waves-effect waves-light grey darken-3">
                         {props.speaks}
                     </a>
                 </div>
@@ -20,7 +20,7 @@ const Message = (props) => {
                 </div>
                 {props.speaks==='yo' &&
                 <div className="col s2">
-                    <a href="/" className="btn-floating btn-large waves-effect waves-light red">
+                    <a href="/" className="btn-floating btn-large waves-effect waves-light grey lighten-1">
                         {props.speaks}
                     </a>
                 </div>
