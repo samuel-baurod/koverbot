@@ -29,7 +29,9 @@ class Chatbot extends Component {
         this.state = {
             messages: [],
             showBot: true,
+            isShop: false,
             shopWelcomeSent: false,
+            welcomeSent: false,
             clientToken: false,
             regenerateToken: 0
         };
@@ -80,7 +82,7 @@ class Chatbot extends Component {
 
         try {
             if (this.state.clientToken === false) {
-                const res = await axios.get('/api/get_client_token/');
+                const res = await axios.get('/api/get_client_token');
                 this.setState({clientToken: res.data.token});
             }
 
@@ -110,7 +112,7 @@ class Chatbot extends Component {
                 config
               );
 
-            let  says = {};
+            let says = {};
 
             if (res.data.queryResult.fulfillmentMessages ) {
                 for (let msg of res.data.queryResult.fulfillmentMessages) {
@@ -121,6 +123,9 @@ class Chatbot extends Component {
                     this.setState({ messages: [...this.state.messages, says]});
                 }
             }
+
+            this.setState({regenerateToken: 0});
+
         } catch (e) {
             //console.log(e);
             if (e.response.status === 401 && this.state.regenerateToken < 1) {
