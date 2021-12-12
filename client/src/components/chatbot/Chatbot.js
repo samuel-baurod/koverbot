@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios/index';
 import { withRouter} from 'react-router-dom';
 
+
 import Cookies from 'universal-cookie';
 import { v4 as uuid} from 'uuid';    
 
@@ -272,13 +273,14 @@ class Chatbot extends Component {
 
     if(this.state.showBot) {
         return(
-            <div style={{ minHeight: 500, maxHeight: 470, width:400, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgray'}}>
+            <div style={{ minHeight: 500, maxHeight: 470, width:400, position: 'fixed', backgroundColor: 'white',  bottom: 0, right: 0, border: '1px solid lightgray', visibility: 'visible', zIndex: 2}}>
                 <nav>
                     <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="/" onClick={this.hide}>Cerrar</a></li>
                         </ul>
+
                     </div>
                 </nav> 
 
@@ -295,13 +297,14 @@ class Chatbot extends Component {
             );
     } else {
         return(
-            <div style={{ minHeight: 40, maxHeight: 500, width: 400, position: 'absolute', bottom: 0, right: 0, border: '1px solid lightgrey'}}>
+            <div style={{ minHeight: 40, maxHeight: 500, width: 400, position: 'fixed', bottom: 0, right: 0, border: '1px solid lightgrey', visibility: 'visible', zIndex: 2}}>
                 <nav>
                     <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="/" onClick={this.show}>Mostrar</a></li>
                         </ul>
+
                     </div>
                 </nav> 
                 <div ref={(el) => { this.messagesEnd = el; }}
