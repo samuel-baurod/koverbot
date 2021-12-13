@@ -16,6 +16,18 @@ a:hover {
   text-decoration: none;
 }
 
+a.cerrar:hover {
+  color: #10100F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.mostrar:hover {
+  color: #10100F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
 }
@@ -211,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
-* NAVEGACION MOVIL 
+* NAVEGACION MOVIL DE HEADER
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -219,6 +231,10 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: none;
   transition: 0.5s;
+}
+
+.mobile-nav-toggle:hover {
+  color: #10100F;
 }
 
 
@@ -277,8 +293,8 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
 }
 .navbar-mobile a, .navbar-mobile a:focus {
-  padding: 15px 25px;
-  font-size: 15px;
+  padding: 5px 15px;
+  font-size: 10px;
   align-items: center;
   
 
@@ -315,6 +331,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
+
+
 
 /*--------------------------------------------------------------
 # CARRUSEL PRINCIPAL

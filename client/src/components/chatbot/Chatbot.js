@@ -278,8 +278,13 @@ class Chatbot extends Component {
                     <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><a href="/" onClick={this.hide}>Cerrar</a></li>
+                            <li><a href="/" onClick={this.hide} className='cerrar'>Cerrar</a></li>
                         </ul>
+
+                        <ul id="nav-mobile-cerrar" className="right hide-on-med-and-down-cerrar">
+                            <li><a href="/" onClick={this.hide} className='cerrar-icono'><i class="bi bi-arrows-angle-contract right mobile-nav-toggle"></i></a></li>
+                        </ul>
+
 
                     </div>
                 </nav> 
@@ -293,6 +298,7 @@ class Chatbot extends Component {
                 <div className="col s12">
                     <input style={{margin: 0, paddingLeft: '1%', paddingRight: '1%', width: '98%'}} ref={(input) => { this.talkInput = input; }} placeholder="Escribe un mensaje:"  onKeyPress={this._handleInputKeyPress} id="user_says" type="text" />
                 </div>
+
             </div>
             );
     } else {
@@ -302,7 +308,11 @@ class Chatbot extends Component {
                     <div className="nav-wrapper light-green">
                         <a href="/" className="brand-logo">KoverBot</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><a href="/" onClick={this.show}>Mostrar</a></li>
+                            <li><a href="/" onClick={this.show} className='mostrar'>Mostrar</a></li>
+                        </ul>
+                        
+                        <ul id="nav-mobile-mostrar" className="right hide-on-med-and-down-mostrar">
+                            <li><a href="/" onClick={this.show} className='mostrar'><i class="bi bi-arrows-angle-expand right mobile-nav-toggle"></i></a></li>
                         </ul>
 
                     </div>
